@@ -60,7 +60,7 @@ def restaurant_detail(request, restaurant_id):
     return render(request, 'detail.html', context)
 
 def no_access(request):
-    return redirect('no-access')
+    return render(request, 'no_access.html')
 
 def restaurant_create(request):
     if request.user.is_anonymous:
